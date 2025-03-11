@@ -1,0 +1,30 @@
+package com.aniket;
+
+import com.aniket.util.SinglyLinkedList;
+
+public class App {
+
+	public static void main(String[] args) 
+	{
+		SinglyLinkedList L = new SinglyLinkedList();
+		L.add(11);
+		L.add(22);
+		L.add(33);
+		L.add(44);
+		L.add(55);
+		
+		System.out.println("LinkedList : ");
+		L.displayLinkedList();
+		System.out.println("LinkedList Elements : " + L.size());
+		System.out.println("Sum of Elements : " + L.sum());
+		System.out.println("-------------------------------");
+		System.out.println(L);
+		System.out.println("-------------------------------");
+		System.out.println("Even and Odd elements : ");
+		L.displayEvenOdd();
+		System.out.println("-------------------------------");
+		//System.out.println();
+
+	}
+
+}

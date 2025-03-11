@@ -1,0 +1,152 @@
+package com.aniket.util;
+
+import java.util.StringJoiner;
+
+public class SinglyLinkedList 
+{
+		private Node first;
+		private Node last;
+		private int count;
+		
+		private static class Node
+		{
+			private int data;
+			private Node next;
+			
+			public Node(int data)
+			{
+				this.data = data;
+			}
+		}
+		
+		public void add(int data)
+		{
+			if(first == null)
+			{
+				Node node = new Node(data);
+				first = node;
+				last = node;
+				count++;
+			}
+			else
+			{
+				Node node = new Node(data);
+				last.next = node;
+				last = last.next;
+				count++;
+			}
+		}
+		
+		public int size()
+		{
+			return count;
+		}
+	
+		public void addFirst(int element)
+		{
+			
+			if(first == null)
+			{
+				Node node = new Node(element);
+				first = node;
+				last = node;
+				count++;
+			}
+			else
+			{
+				Node node = new Node(element);
+				node.next = first;
+				first = node;
+				count++;
+			}
+			
+		}
+		
+		
+		public void addLast(int element)
+		{
+			add(element);
+		}
+		
+		
+		// Helper-Utility Function
+		private Node getNodeAt(int index) 
+		{
+			if(index < 0 || index >= count)
+			{
+				throw new IndexOutOfBoundsException("Index :" + index + ", Size :" + count );
+			}
+				
+			Node node = first;
+			int i;	
+			for(i=0;i<count;i++)
+			{
+				if(i==index)
+				{
+					return node;
+				}
+				node = node.next;
+			}
+			
+			return null;
+		}
+		
+		
+		
+	
+		//Display 
+		public void displayLinkedList()
+		{
+			for(Node node=first;node!=null;node = node.next)
+			{
+				System.out.print(node.data + "->");
+			}
+			System.out.println("null");
+		}
+		
+		//1.Write a function sum() which well return sum of elements from linked list
+		public long sum()
+		{
+			int sum = 0;
+			for(Node node=first;node!=null;node = node.next)
+			{
+				sum += node.data;
+			}
+			return sum;
+		}
+		
+		//2.Write a function dispOddEven() which well print even & Odd numbers separately
+		public void displayEvenOdd()
+		{
+			System.out.print("Even : ");
+			for(Node node=first;node!=null;node = node.next)
+			{
+				if(node.data%2==0)
+				{
+					System.out.print(node.data + " ");
+				}
+			}
+			System.out.println();
+			System.out.print("Odd : ");
+			for(Node node=first;node!=null;node = node.next)
+			{
+				if(node.data%2!=0)
+				{
+					System.out.print(node.data + " ");
+				}
+			}
+			System.out.println();
+		}
+	
+	
+		@Override
+		public String toString()
+		{
+			StringJoiner sj = new StringJoiner(",","[","]");
+			for(Node node=first;node!=null;node = node.next)
+			{
+				sj.add(String.valueOf(node.data));
+			}
+			return sj.toString();
+		}
+}
