@@ -14,7 +14,7 @@ public class App {
 		L.add(55);
 		
 		
-		System.out.println("Maximum Element : " + L.findMin());
+		System.out.println("Maximum Element : " + L.findMax());
 		System.out.println("-------------------------------");
 		System.out.println(L);
 		//System.out.println();

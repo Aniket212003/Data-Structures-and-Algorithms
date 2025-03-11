@@ -13,8 +13,7 @@ public class App {
 		L.add(44);
 		L.add(55);
 		
-		
-		System.out.println("Maximum Element : " + L.findMin());
+		System.out.println("Element-->" + L.setElement(2,99));
 		System.out.println("-------------------------------");
 		System.out.println(L);
 		//System.out.println();

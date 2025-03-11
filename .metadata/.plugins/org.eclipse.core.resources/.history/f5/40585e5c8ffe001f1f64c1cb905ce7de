@@ -195,11 +195,6 @@ public class SinglyLinkedList
 		//5.Write a Function findMax() which well return max element from Linkedlist.
 		public int findMax()
 		{
-			if(first == null)
-			{
-				throw new NoSuchElementException("List is Empty !!");
-			}
-			
 			int max = first.data;
 			for(Node T = first;T!=null;T=T.next)
 			{
@@ -214,11 +209,6 @@ public class SinglyLinkedList
 		//6.Write a Function findMin() which well return max element from Linkedlist.
 		public int findMin()
 		{
-			if(first == null)
-			{
-				throw new NoSuchElementException("List is Empty !!");
-			}
-			
 			int min = first.data;
 			for(Node T = first;T!=null;T=T.next)
 			{

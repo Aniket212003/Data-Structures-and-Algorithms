@@ -1,6 +1,5 @@
 package com.aniket.util;
 
-import java.util.NoSuchElementException;
 import java.util.StringJoiner;
 
 public class SinglyLinkedList 
@@ -100,10 +99,6 @@ public class SinglyLinkedList
 		
 		public int setElement(int index, int element)
 		{
-			if(first == null)
-			{
-				throw new NoSuchElementException("List is Empty !!");
-			}
 			//Node node = new Node(element);
 			Node t = getNodeAt(index);
 			int item = t.data;
@@ -126,11 +121,6 @@ public class SinglyLinkedList
 		//1.Write a function sum() which well return sum of elements from linked list
 		public long sum()
 		{
-			if(first == null)
-			{
-				throw new NoSuchElementException("List is Empty !!");
-			}
-			
 			int sum = 0;
 			for(Node node=first;node!=null;node = node.next)
 			{
@@ -142,11 +132,6 @@ public class SinglyLinkedList
 		//2.Write a function dispOddEven() which well print even & Odd numbers separately
 		public void displayEvenOdd()
 		{
-			if(first == null)
-			{
-				throw new NoSuchElementException("List is Empty !!");
-			}
-			
 			System.out.print("Even : ");
 			for(Node node=first;node!=null;node = node.next)
 			{
@@ -178,11 +163,6 @@ public class SinglyLinkedList
 		//4.Write a Function dispAlternate() which will display alternates nodes.
 		public void dispAltrnate()
 		{
-			if(first == null)
-			{
-				throw new NoSuchElementException("List is Empty !!");
-			}
-			
 			int i;
 			for(i=0;i<count;i+=2)
 			{
@@ -195,11 +175,6 @@ public class SinglyLinkedList
 		//5.Write a Function findMax() which well return max element from Linkedlist.
 		public int findMax()
 		{
-			if(first == null)
-			{
-				throw new NoSuchElementException("List is Empty !!");
-			}
-			
 			int max = first.data;
 			for(Node T = first;T!=null;T=T.next)
 			{
@@ -214,11 +189,6 @@ public class SinglyLinkedList
 		//6.Write a Function findMin() which well return max element from Linkedlist.
 		public int findMin()
 		{
-			if(first == null)
-			{
-				throw new NoSuchElementException("List is Empty !!");
-			}
-			
 			int min = first.data;
 			for(Node T = first;T!=null;T=T.next)
 			{
